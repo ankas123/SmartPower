@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.kaushik.app.smartpower.SwitchActivity"
+    tools:showIn="@layout/activity_switch">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/conn_prog"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/conn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/conn_prog"
+        android:text="Connection : " />
+
+    <TextView
+        android:id="@+id/conn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/conn_text"
+
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/conn_text"
+        android:text="Disconnected" />
+
+    <Button
+        android:id="@+id/conn_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/conn_prog"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/conn"
+        android:text="Connect"
+        android:textColor="@color/ble" />
+
+
+</RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
